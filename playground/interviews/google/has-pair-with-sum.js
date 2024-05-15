@@ -14,8 +14,7 @@ const { default: test } = require("node:test");
 // O(n^2) complexity, too bad
 // takes a lot of time
 
-const arr1 = [1, 2, 3, 9];
-const arr2 = [1, 2, 4, 4];
+const arr1 = [1, 2, 4, 4];
 
 function hasPairWithSum(array, sum) {
   // loop that iterates the array
@@ -35,3 +34,27 @@ function hasPairWithSum(array, sum) {
 
 hasPairWithSum(arr1, 8);
 console.log(hasPairWithSum(arr1, 8));
+
+// <-- Better one -->
+
+const arr2 = [1, 2, 3, 9, 5];
+
+function hasPairWithSum2(arr, sum) {
+  // create a set of items to store unique values
+  const set = new Set();
+  // loop throught array
+  for (let i = 0; i < arr.length; i++) {
+  // if set has the item arr[i] return true
+    if (set.has(arr[i])) {
+      return true;
+    }
+
+  // else add the arr[i] subtracted from sum
+    set.add(sum - arr[i]);
+  }
+
+  return false
+}
+
+hasPairWithSum2(arr2, 8)
+console.log(hasPairWithSum2(arr2, 8))
