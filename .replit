@@ -1,6 +1,32 @@
-entrypoint = "index.js"
+entrypoint = "playground/interviews/google/has-pair-with-sum.js"
 modules = ["nodejs-20:v8-20230920-bd784b9"]
 hidden = [".config", "package-lock.json"]
+onBoot = '''/nix/store/fbi9r30p3lqk96lmw5b1v1bpbj62cr2l-inotify-tools-3.20.11.0/bin/inotifywait -rqme create --format=%f%w --include='\..+\.js.[0-9]+~' .|while
+read f
+do
+f=${f#.}
+o=
+r=
+while
+read -r l||[ "$l" ]
+do
+case $r
+in
+"")case $l
+in entrypoint*)m="${l%\"*\"}\"${f#*~./}${f%.*~*}\""
+case $m
+in
+"$l")break
+esac
+l=$m
+r=1
+esac
+esac
+o="$o$l
+"
+false
+done<.replit||echo -n "$o">.replit
+done'''
 
 [gitHubImport]
 requiredFiles = [".replit", "replit.nix", "package.json", "package-lock.json"]
