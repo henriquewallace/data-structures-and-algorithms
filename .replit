@@ -1,4 +1,4 @@
-entrypoint = "data-structures/arrays/my-array.js"
+entrypoint = "data-structures/arrays/exercises/reverse-string.js"
 modules = ["nodejs-20:v8-20230920-bd784b9"]
 hidden = [".config", "package-lock.json"]
 onBoot = '''/nix/store/fbi9r30p3lqk96lmw5b1v1bpbj62cr2l-inotify-tools-3.20.11.0/bin/inotifywait -rqme create --format=%f%w --include='\..+\.js.[0-9]+~' .|while
