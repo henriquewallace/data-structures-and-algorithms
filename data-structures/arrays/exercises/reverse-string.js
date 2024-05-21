@@ -1,5 +1,7 @@
 // reverse a string
 
+const { setgroups } = require("process");
+
 // inputs: string
 // output: reversed string
 
@@ -32,7 +34,6 @@ function reverseString(str) {
 }
 
 console.log(reverseString(myString));
-
 
 anotherString = "Hey there!";
 
