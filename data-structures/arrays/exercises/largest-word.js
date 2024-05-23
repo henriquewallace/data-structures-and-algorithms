@@ -6,7 +6,7 @@
 // save word in a string
 // compare current word with the saved one
 
-function LongestWord(sen) { 
+function longestWord(sen) { 
   let wordsArray = sen.split(' ');
   let largestWord = '';
 
@@ -22,4 +22,4 @@ function LongestWord(sen) {
 }
 
 // keep this function call here 
-console.log(LongestWord('time to gain'));
+console.log(longestWord('time to gain'));

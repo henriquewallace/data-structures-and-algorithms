@@ -17,7 +17,7 @@
 
 ## Hash Collisions
 - Collisions it's when the hash function addresses an key:value to an memory slot already in use
-- Since we have limited space in memory, using hash tables, we will always have collisions
+- It happens when we have limited and low space in memory, using hash tables, we will always have collisions
 - And collisions makes the read and write operations slower O(n)
   - because it needs to iterate over the linked key:values in the same memory slot
   - those linked key:values in the same memory space are a new data structure called linked lists
