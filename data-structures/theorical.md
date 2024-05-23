@@ -33,3 +33,11 @@
 - Tries
 - Graphs
 - Hash Tables
+
+## Arrays vs Hash Tables
+- In arrays for search by an item, we need to loop all over the array to check if item exists
+- With the keys in hash tables we can immediately find an value
+- Insert and deletion operations in arrays have a greater time complexity over in hash tables
+  - Because in arrays, since the items are ordered, when removing or inserting, we need to shift the indexes
+  - And in hash tables, it's unordered, so we can immediately remove or insert items in memory without needing to shift indexes
+- Even if in hash tables we have collisions, in most cases we don't need to worry about it, just if we have a very low memory space
