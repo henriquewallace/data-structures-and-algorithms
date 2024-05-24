@@ -20,7 +20,7 @@
 ### Linked lists vs Arrays
 - An advantage of Arrays over Linked lists are that they elements are indexed, while Linked lists are not, they have the addresses spread over the memory
 - So since arrays are indexed, it's faster to iterate over it, while in Linked lists are a bit slower to traverse over it.
-- But still, both have O(n) time complexity to perform lookups
+- But still, both have O(n) time complexity to perform insertions and deletions
 
 - Linked lists just has O(1) time complexity to insert or delete nodes on the middle, while in Arrays those ops takes O(n), because they need to shift indexes.
 
@@ -37,3 +37,11 @@
 - obj2 is a pointer, it's a reference to obj1
 - So in memory it's only one entry
 - We aren't copying neither creating a new obj
+
+### Linked Lists Pros
+- Fast insertion/deletion
+- Ordered
+- Flexible size
+### Cons
+- Slow lookup
+- More memory
