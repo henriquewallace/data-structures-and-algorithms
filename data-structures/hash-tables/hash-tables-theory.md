@@ -32,3 +32,13 @@
 - Sets
   - Similar to Maps
   - But only stores the keys
+
+### Pros
+- Are some of best way to optimize time complexity
+- Fast insert and deletion operations
+- Flexible keys
+
+### Negative points
+- Unordered
+- Slow key iteration
+  - If we want to get all keys in a hash table we need to percurr our entire space memory
