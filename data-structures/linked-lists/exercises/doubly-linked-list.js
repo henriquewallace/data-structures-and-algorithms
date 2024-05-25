@@ -3,10 +3,11 @@ class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
+    this.previous = null;
   }
 }
 
-class LinkedList {
+class DoublyLinkedList {
   constructor(headValue) {
     this.head = new Node(headValue);
     this.tail = this.head;
@@ -15,6 +16,7 @@ class LinkedList {
 
   append(value) {
     const newNode = new Node(value);
+    newNode.previous = this.tail;
 
     this.tail.next = newNode;
     this.tail = newNode;
@@ -27,6 +29,7 @@ class LinkedList {
     const newNode = new Node(value);
 
     newNode.next = this.head;
+    this.head.previous = newNode;
     this.head = newNode;
     this.length++;
 
@@ -58,7 +61,9 @@ class LinkedList {
     const holdingNode = leaderNode.next;
 
     leaderNode.next = newNode;
+    newNode.previous = leaderNode;
     newNode.next = holdingNode;
+    holdingNode.previous = newNode;
     this.length++;
   }
 
@@ -94,35 +99,26 @@ class LinkedList {
     return currentNode;
   }
 
-  reverse() {
-    if (!this.head.next) {
-      return this.head;
+  traverseBackwardsToIndex(index) {
+    let counter = this.length - 1;
+    let currentNode = this.tail;
+
+    while (counter !== index) {
+      currentNode = currentNode.previous;
+      counter--;
     }
 
-    let first = this.head;
-    this.tail = this.head;
-    let second = this.head.next;
-
-    while (second) {
-      const temp = second.next;
-      second.next = first;
-      first = second;
-      second = temp;
-    }
-
-    this.head.next = null;
-    this.head = first;
-
-    return this.printList();
+    return currentNode;
   }
 }
 
-const myLinkedList = new LinkedList(10);
+const myLinkedList = new DoublyLinkedList(10);
 console.log(myLinkedList.append(5));
 console.log(myLinkedList.append(16));
 console.log(myLinkedList.prepend(2));
-console.log(myLinkedList.tail);
 console.log(myLinkedList.insert(2, 11));
+// // console.log(myLinkedList.printList());
+// // console.log(myLinkedList.remove(4343));
+// console.log(myLinkedList.printList());
+console.log(myLinkedList.traverseBackwardsToIndex(2));
 console.log(myLinkedList.printList());
-console.log(myLinkedList.remove(4343));
-console.log(myLinkedList.reverse());

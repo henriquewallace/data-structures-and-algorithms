@@ -45,3 +45,9 @@
 ### Cons
 - Slow lookup
 - More memory
+
+## Singly vs Doubly Linked Lists
+- Singly has simplier implementation
+- Singly is faster to insert or delete, because we don't need to track previous node
+- Doubly can traverse in a reverse order (back to front)
+- Doubly requires more memory because this new property
