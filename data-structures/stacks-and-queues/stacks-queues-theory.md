@@ -31,7 +31,7 @@
 - It's useful to don't overload systems, for example, it we are receiving a lot of requests at the same time, to decrease our system overload we implement a queue, with an timeout, to process the requests in FIFO order
 
 ## Queue methods
-- enqueue - O(1) - add item on the beginning
+- enqueue - O(1) - add item on the queue
 - dequeue - O(1) - remove first of the queue
 - peek - O(1) - get the first item of the queue
 - lookup - O(n) - very heavy to perform
