@@ -6,6 +6,11 @@
 - Stacks are useful and can be used for example, to browser history, to see the last visited web site
 - Or even when you write some text, and you want to undo the last char, you use stacks ideas
 - Stacks stores the previous state of your work in memory, with such an order that the last state appears first
+- In Stacks the first item is considered the top
+- And the last item is considered the bottom
+- That's why, LIFO (Last In, Fist Out)
+- The First item in linked list is gonna the last item added, so that's why peek the top item has constant time complexity instead linear
+- But to get the bottom we need to traverse the stack 
 
 ## Stack methods
 - Stacks usually comes with three types of methods:
