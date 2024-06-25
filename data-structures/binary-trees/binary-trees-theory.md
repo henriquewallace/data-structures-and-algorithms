@@ -37,3 +37,13 @@ If you keep going to the right the values are going to increase constantly
 - It turns into a linked-list
 - Time complexity becames linear O(n) in worst cases
 
+## Balanced Trees
+- We have some strategies to balance a tree, like:
+  - Red/black trees
+  - AVL Trees
+
+# Binary Heap
+- Useful where ordering is important
+- Priority queues
+## Max Heap
+- The parent node is always greater then the children nodes
