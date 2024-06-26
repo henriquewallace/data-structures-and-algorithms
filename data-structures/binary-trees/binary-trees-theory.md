@@ -44,6 +44,9 @@ If you keep going to the right the values are going to increase constantly
 
 # Binary Heap
 - Useful where ordering is important
-- Priority queues
-## Max Heap
 - The parent node is always greater then the children nodes
+- Priority queues
+
+# Trie
+- Useful for searching words, search engines
+
